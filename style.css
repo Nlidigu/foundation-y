@@ -9,11 +9,11 @@ body{
     box-sizing: border-box;
 }
 .toplink{
-    background-color: rgb(51, 51, 50);
+    background-color: rgb(130, 130, 34);
     overflow: hidden;
 }
 .toplink a{
-    color: #ffffff;
+    color: #bd0909;
     float: left;
     display: block;
     text-decoration: none;
@@ -93,7 +93,7 @@ p{
 .team_member{
     text-align: center;
     font-size: small;
-    color: #880f0f;
+    color: #bf5a5a;
     font-style: italic;
     font-weight: normal;
     display: inline-block;
