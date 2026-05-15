@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Web 1.0</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Internet Terminology Project</h1>
+    <h1>Contact Us</h1>
     <nav>
       <a href="index.html">HOME</a> |
       <a href="www.html">ABOUT US</a> |
@@ -30,13 +30,41 @@
   </header>
 
   <main>
-    <h2>Web 1.0</h2>
-    <p>Web 1.0 refers to the early stage of the web, characterized by static pages and limited user interaction. Content was mostly read-only.</p>
-    <img src="images/web1.png" width="300" height="300" alt="Web 1.0 Example">
+    <h2>How to reach Us:</h2>
+  <p1> Contact Us<br>
+Have questions or need help? Reach out to us.<br>
+Before contacting us, please check our FAQ page first.<br>
+For support regarding:<br><br>
+- Form submission issues<br>
+- Data deletion requests<br>
+- Questions about your date or color selection<br>
+- Any problems with the submit button<br><br>
+We aim to respond within 2 business days.<br>
+Please include your name and email when contacting us so we can assist you faster.<br></p1>
+<p2>
+
+For urgent matters, you can also call us at (555) 123-4567 during business hours (9am-5pm, Mon-Fri).<br>
+We are here to help and ensure you have a great experience with our form!</p2>
+<p3>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="your.email@example.com" required><br><br>
+  <label for="number">Phone Number:</label><br> 
+  <input type="tel" id="number" name="number" placeholder="Enter your phone number" maxlength="14"><br><br>
+  <label for="date">Date:</label><br> 
+  <input type="date" id="date" name="date" required><br><br>
+  enter message:<br>
+  <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..."></textarea><br><br>
+
+  <form action="Submit-form.php"method="post">
+  <input type="submit" value="Submit">
+  
+</p3>
   </main>
 
   <footer>
     <p>&copy; 2026 Internet Terminology Project</p>
   </footer>
-</body>
-</html>
+
+
