@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body onload="starTime()">
+    <script>
+        var name = "Alex Okama";
+        // calling the function from the external JavaScript file
+        document.write(greetings(name));
+    </script>
+<p id="dateTime"></p>
+
+<script>
+    // Indexed array
+   var fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+    // document.write("<br>" + fruits[1] + "<br>"); // Output: Banana
+
+    // Associative array (using an object in JavaScript)
+    var person = {
+        name: "John Doe",
+        age: 30,
+        city: "New York"
+    };
+    document.write(person.city);
+
+    // multi-dimensional array (array of arrays)
+    var matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    document.write("<br>" + matrix[2][2] + "<br>"); // Output: 9
+
+    var userDetails = {
+        Director:{
+            name: ["Alex", "Otema"],
+            email: {
+                "Work Email": "alex.otema@example.com",
+                "Home Email": "alex.otema@home.com"
+            },
+            phone: "123-456-7890",
+            address: "123 Main St, Anytown, USA"
+      },
+        Manager: {
+                name: ["Jane", "Okama"],
+                email: {
+                    Work_Email: "jane.okama@example.com",
+                    "Home Email": "jane.okama@home.com"
+                },
+                phone: "987-654-3210",
+                address: "456 Elm St, Othertown, USA"
+        },
+        "Human Resources": {
+            name: ["Alice", "Okama"],
+            email: {
+                Work_Email: "alice.okama@example.com",
+                "Home Email": "alice.okama@home.com"
+            },
+            phone: "555-123-4567",
+            address: "789 Oak St, Sometown, USA"
+        },
+        Operations: {
+            name: ["Bob", "Okama"],
+            email: {
+                "Work Email": "bob.okama@example.com",
+                "Home Email": "bob.okama@home.com"
+            },
+            phone: "444-555-6666",
+            address: "101 Pine St, Anothertown, USA"
+        },
+        Secretary: {
+            name: ["Charlie", "Okama"],
+            email: {
+                "Work Email": "charlie.okama@example.com",
+                "Home Email": "charlie.okama@home.com"
+            },
+            phone: "333-444-5555",
+            address: "202 Maple St, Newtown, USA"
+        },
+        // Secretary Bio
+        SecretaryBio: function() {
+            return this.Secretary.name.join(" ") + " is the secretary of the company. You can contact him at " + this.Secretary.email["Work Email"] + " or " + this.Secretary.email["Home Email"] + ". Or schedule a meeting at " + this.Secretary.phone + " or visit him at " + this.Secretary.address + ".";
+        },
+
+        // functions
+        getDirectorEmail: function() {
+            return userDetails.Director.email["Work Email"];
+        },
+        getManagerHomeEmail: function () {
+        // Secretary home email
+         return this.Secretary.email["Home Email"] + "<br>"; 
+        }
+    };
+    // Accessing data
+    document.write(userDetails.getManagerHomeEmail() + "<br>"); // Output:
+    document.write(userDetails.SecretaryBio() + "<br>");
+
+var kenyanCities = ["Nairobi", "Mombasa", "Kisumu", "Nakuru", "Eldoret", "Thika", "Kitale", "Garissa", "Meru", "Machakos"];
+</script>
+
+<form action="" class="contactForm1">
+    <label for="cities">Select a city:</label><br>
+    <select id="cities" name="cities">
+        <script>
+            for (var i = 0; i < kenyanCities.length; i++) {
+                document.write("<option value='" + kenyanCities[i] + "'>" + kenyanCities[i] + "</option>");
+            }
+        </script>
+    </select>
+</form>
+<br>
+<select name="" id="">
+    <option value="">Select a city</option>
+    <option value="Nairobi">Nairobi</option>
+    <option value="Mombasa">Mombasa</option>
+    <option value="Kisumu">Kisumu</option>
+    <option value="Nakuru">Nakuru</option>
+    <option value="Eldoret">Eldoret</option>
+</select>
+
+<br>
+
+<script>
+    var dateTime = new Date(); // current date and time
+    var hours = dateTime.getHours();
+
+    var weekday = dateTime.getDay(); // output: 0 (Sunday) to 6 (Saturday)
+    // array of weekday indexes
+    // { 0:"Sunday", 1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday", 6:"Saturday"}
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var weekdayName = weekdays[weekday]; // get the weekday name
+
+    var month = dateTime.getMonth(); // output: 0 (January) to 11 (December)
+    // array of month indexes
+    // { 0:"January", 1:"February", 2:"March", 3:"April", 4:"May", 5:"June", 6:"July", 7:"August", 8:"September", 9:"October", 10:"November", 11:"December"}
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var monthName = months[month]; // get the month name
+
+    document.write("Hours: " + hours);
+    document.write("<br>Weekday: " + weekdayName);
+    document.write("<br>Month: " + monthName);
+// loops
+// While loop
+document.write("<h4>While Loop</h4>");
+var i = 7; // initialization
+while (i <= 15) { // Condition
+    document.write(i + "<br>"); // code to be executed
+    i+=2; // increment by 2
+}
+// do-while loop
+document.write("<h4>Do-While Loop</h4>");
+var j = 10; // initialization
+do {
+    document.write(j + "<br>"); // code to be executed
+    j+=3; // increment by 3
+} while (j <= 30); // Condition
+// for loop
+document.write("<h4>For Loop</h4>");
+for (var k = 1; k <= 10; k++) { // initialization, condition, increment
+    document.write(k + "<br>"); // code to be executed
+}
+// for of loop (for arrays)
+document.write("<h4>For Of Loop</h4>");
+var colors = ["Red", "Green", "Blue", "Yellow", "Purple"];
+for (var color of colors) { // iterating over the colors array
+    if (color === "Yellow") {
+        break; // exit the loop when color is Yellow
+        // continue; // skip the rest of the loop when color is Yellow
+    }
+    document.write(color + "<br>"); // code to be executed
+}
+// for in loop (for objects)
+document.write("<h4>For In Loop</h4>");
+var car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    color: "Red"
+};
+for (var carDetail in car) { // iterating over the car object
+    document.write(carDetail + ": " + car[carDetail] + "<br>"); // code to be executed
+}
+
+
+
+</script>
+<br>
+<br>
+
+<h5>Select date of Birth</h5>
+<select>
+    <option value="">Select Day</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <script> // dynamically add day 31 for months that have 31 days
+        var daySelect = document.querySelector("select");
+        var day31 = document.createElement("OPTION");
+        day31.value = "31";
+        day31.text = "31";
+        daySelect.appendChild(day31);
+     var dateTime = new Date(); // current date and time
+     var month = dateTime.getMonth(); // output: 0 (January) to 11 (December)
+     if (month === 0 || month === 2 || month === 4 || month   
+=== 6 || month === 7 || month === 9 || month === 11) {
+        day31.style.display = "block"; // show day 31 for months that have 31 days
+     } else {
+        day31.style.display = "none"; // hide day 31 for months that don't have 31 days
+     }      
+</select>
+<script>
+    var monthSelect = document.querySelector("select");
+    monthSelect.addEventListener("change", function() {
+        var selectedMonth = monthSelect.value;
+        if (selectedMonth === "January" || selectedMonth === "March" || selectedMonth === "May" || selectedMonth === "July" || selectedMonth === "August" || selectedMonth === "October" || selectedMonth === "December") {
+            day31.style.display = "block"; // show day 31 for months that have 31 days
+        } else {
+            day31.style.display = "none"; // hide day 31 for months that don't have 31 days
+        }
+    );
+    var currentYear = new Date().getFullYear(); // get the current year
+    var yearSelect = document.createElement("SELECT"); // create a select element for years 
+    yearSelect.name = "year";
+    yearSelect.id = "year"; 
+    for (var year = currentYear; year >= 1900; year--) { // loop to add years from current year to 1900
+        var option = document.createElement("OPTION"); // create an option element for each year
+        option.value = year;
+        option.text = year;
+        yearSelect.appendChild(option); // add the option to the year select element
+    }
+<br>
+<br>
+<script>
+</body>
+</html>
